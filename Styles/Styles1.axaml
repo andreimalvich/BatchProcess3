@@ -37,6 +37,17 @@
 		<!--<Setter Property="FontFamily" Value="{DynamicResource AkkoPro}"></Setter>-->
 	</Style>
 
+	<Style Selector="Border">
+		<Setter Property="Transitions">
+			<Transitions>
+				<DoubleTransition Property="Width" Duration="0:0:1"/>
+			</Transitions>
+				
+		</Setter>
+	</Style>
+
+
+
 	<Style Selector="Label.icon-only">
 		<Setter Property="Margin" Value="0"></Setter>
 	</Style>
@@ -65,36 +76,43 @@
 		<Setter Property="Background" Value="{DynamicResource PrimaryBackground}"/>
 	</Style>
 
-	<Style Selector="Button /template/ ContentPresenter">
-		<Setter Property="RenderTransform" Value="scale(1)"/>
-		<!--24:06-->
+	<Style Selector="Button /template/ ContentPresenter">	
+		 
 		<Setter Property="Transitions">
 			<Transitions>
-				<TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1">
-					
-				</TransformOperationsTransition>
+				<BrushTransition Property="Foreground" Duration="0:0:0.1"/>
+				<BrushTransition Property="Background" Duration="0:0:0.1"/>				
+				<TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1"/>
 			</Transitions>
 		</Setter>
-</Style>
+	</Style>
 
-	<Style Selector="Button.transparent:pointerover Label">
+	<Style Selector="Button.active /template/ ContentPresenter">
+		<Setter Property="Background" Value="{DynamicResource PrimaryActiveBackground}"/>
+	</Style>
+
+
+	<Style Selector="Button.transparent:pointerover /template/ ContentPresenter">
 		<Setter Property="RenderTransform" Value="scale(1.2)"/>
-</Style>
+	</Style>
 
 	<Style Selector="Button:pointerover /template/ ContentPresenter">
 		<Setter Property="Foreground" Value="{DynamicResource PrimaryHoverForeground}"/>
-		<Setter Property="Background" Value="{DynamicResource PrimaryHoverBackground}"/>		
-</Style>
+		<Setter Property="Background" Value="{DynamicResource PrimaryHoverBackground}"/>
+    </Style>
 
 
 	<Style Selector="Button.transparent">
 		<Setter Property="Background" Value="Transparent"></Setter>
 	</Style>
 
+	<Style Selector="Button.transparent Label.icon-only">
+		<Setter Property="FontFamily" Value="{DynamicResource Phosphor}"></Setter>
+	</Style>
+
 	<Style Selector="Button.transparent:pointerover /template/ ContentPresenter">
 		<Setter Property="Background" Value="Transparent"/>
 	</Style>
-
 
 
 </Styles>

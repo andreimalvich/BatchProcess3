@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <RootNamespace>BatchProcess3</RootNamespace>
     <OutputType>WinExe</OutputType>
@@ -11,6 +11,7 @@
     <None Remove="Assets\Fonts\AkkoPro-Regular.ttf" />
     <None Remove="Assets\Fonts\Phosphor-Fill.ttf" />
     <None Remove="Assets\Fonts\Phosphor.ttf" />
+    <None Remove="Assets\Images\icon.svg" />
     <None Remove="Assets\Images\logo.svg" />
   </ItemGroup>
   <ItemGroup>
@@ -18,6 +19,7 @@
     <AvaloniaResource Include="Assets\Fonts\AkkoPro-Regular.ttf" />
     <AvaloniaResource Include="Assets\Fonts\Phosphor-Fill.ttf" />
     <AvaloniaResource Include="Assets\Fonts\Phosphor.ttf" />
+    <AvaloniaResource Include="Assets\Images\icon.svg" />
     <AvaloniaResource Include="Assets\Images\logo.svg" />
   </ItemGroup>
 
@@ -31,11 +33,12 @@
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
     <PackageReference Include="Svg.Controls.Skia.Avalonia" Version="12.0.0.13" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="MainView.axaml.cs">
+    <Compile Update="Views\Pages\MainView.axaml.cs">
       <DependentUpon>MainView.axaml</DependentUpon>
     </Compile>
   </ItemGroup>
