@@ -44,24 +44,24 @@ public partial class MainViewModel : ViewModelBase
         
 
     [RelayCommand]
-    private void GoToHomePage() => CurrentPage = _pageFactory.GetPageViewModel<HomePageViewModel>();    
+    private void GoToHome() => CurrentPage = _pageFactory.GetPageViewModel<HomePageViewModel>();    
 
     [RelayCommand]
-    private void GoToProcessPage() => CurrentPage = _pageFactory.GetPageViewModel<ProcessPageViewModel>();
+    private void GoToProcess() => CurrentPage = _pageFactory.GetPageViewModel<ProcessPageViewModel>();
 
     [RelayCommand]
-    private void GoToActionsPage() => CurrentPage = _pageFactory.GetPageViewModel<ActionsPageViewModel>();
+    private void GoToActions() => CurrentPage = _pageFactory.GetPageViewModel<ActionsPageViewModel>();
 
     [RelayCommand]
-    private void GoToMacrosPage() => CurrentPage = _pageFactory.GetPageViewModel<MacrosPageViewModel>();
+    private void GoToMacros() => CurrentPage = _pageFactory.GetPageViewModel<MacrosPageViewModel>();
     
     [RelayCommand]
-    private void GoToReporterPage() => CurrentPage = _pageFactory.GetPageViewModel<ReporterPageViewModel>();
+    private void GoToReporter() => CurrentPage = _pageFactory.GetPageViewModel<ReporterPageViewModel>();
     
     [RelayCommand]
-    private void GoToHistoryPage() => CurrentPage = _pageFactory.GetPageViewModel<HistoryPageViewModel>();
+    private void GoToHistory() => CurrentPage = _pageFactory.GetPageViewModel<HistoryPageViewModel>();
     
     [RelayCommand]
-    private void GoToSettingsPage() => CurrentPage = _pageFactory.GetPageViewModel<SettingsPageViewModel>();
+    private void GoToSettings() => CurrentPage = _pageFactory.GetPageViewModel<SettingsPageViewModel>();
    
 }
