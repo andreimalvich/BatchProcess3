@@ -2,11 +2,7 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using BatchProcess3.ViewModels;
-using BatchProcess3.ViewModels.Pages;
-using BatchProcess3.Views.Pages;
-using Microsoft.Extensions.DependencyInjection;
 using System;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BatchProcess3;
 
