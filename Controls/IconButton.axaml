@@ -1,12 +1,10 @@
-<ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                    
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     x:ClassModifier="internal">
-  
-
-  <Design.PreviewWith>
-      <Border Padding="20" Background="{DynamicResource PrimaryBackground}">
-          <Grid ColumnDefinitions="*, 30, *">
-              <StackPanel Spacing="20">
+    <Design.PreviewWith>
+        <Border Padding="20" Background="{DynamicResource PrimaryBackground}">
+            <Grid ColumnDefinitions="*, 30, *">
+                <StackPanel Spacing="20">
                     <IconButton IconText="&#xe7f2;" Height="100" Content="Click Me!" />
                     <IconButton IconText="&#xe7f2;" Content="Click Me!" />
                     <IconButton IconText="&#xe7f2;" />
@@ -24,13 +22,12 @@
                                 Content="Click Me!" />
                     <IconButton IconText="&#xe3e4;" IsEnabled="False" Classes="outline icon-outline" Content="Click Me!" />
                     <Button Content="Click Me!" IsEnabled="False" />
-                    <Button Classes="accent" Content="Click Me!" IsEnabled="False" />                  
-              </StackPanel>
+                    <Button Classes="accent" Content="Click Me!" IsEnabled="False" />
+                </StackPanel>
 
-          </Grid>
-      </Border>
-  </Design.PreviewWith>
-
+            </Grid>
+        </Border>
+    </Design.PreviewWith>
 
     <ControlTheme x:Key="{x:Type IconButton}" TargetType="IconButton">
         <Setter Property="Background" Value="{DynamicResource ButtonBackground}" />
@@ -272,11 +269,5 @@
         </Style>
 
 
-
-
-
     </ControlTheme>
-
-
-    
 </ResourceDictionary>

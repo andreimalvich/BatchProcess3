@@ -7,7 +7,8 @@ namespace BatchProcess3.Controls;
 
 public class IconButton : Button
 {
-    public static readonly StyledProperty<string> IconTextProperty = AvaloniaProperty.Register<IconButton, string>(nameof(IconText));
+    public static readonly StyledProperty<string> IconTextProperty = AvaloniaProperty.Register<IconButton, string>(
+        nameof(IconText));
 
     public string IconText
     {

@@ -1,15 +1,15 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:controls="using:BatchProcess3.Controls"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="100"
-             x:Class="BatchProcess3.Controls.HeaderBanner"             
+             x:Class="BatchProcess3.Controls.HeaderBanner"
+             xmlns:controls="clr-namespace:BatchProcess3.Controls"
              x:DataType="controls:HeaderBanner">
-
-      <Grid>
-        <StackPanel Height="100" ClipToBounds="True" >        
-            <Svg Path="{Binding BackgroundImage}" Height="140" Stretch="UniformToFill" />        
+    
+    <Grid>
+        <StackPanel Height="100" ClipToBounds="True">
+            <Image Source="{Binding BackgroundImage}" Stretch="UniformToFill" />
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0">
             <Label Classes="h1" Content="{Binding Header}" />
@@ -17,5 +17,5 @@
             <Label Classes="sub2" Content="{Binding SubHeaderB}" />
         </StackPanel>
     </Grid>
-
+    
 </UserControl>

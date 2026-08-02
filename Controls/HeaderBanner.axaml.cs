@@ -1,20 +1,21 @@
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 
 namespace BatchProcess3.Controls;
 
 public partial class HeaderBanner : UserControl
 {
-    public static readonly StyledProperty<string?> BackgroundImageProperty = AvaloniaProperty.Register<HeaderBanner, string?>(
-            nameof(BackgroundImage));
+    public static readonly StyledProperty<IImage?> BackgroundImageProperty = AvaloniaProperty.Register<HeaderBanner, IImage?>(
+        nameof(BackgroundImage));
 
-    public string? BackgroundImage
+    public IImage? BackgroundImage
     {
         get => GetValue(BackgroundImageProperty);
         set => SetValue(BackgroundImageProperty, value);
     }
-
+    
     public static readonly StyledProperty<string?> HeaderProperty = AvaloniaProperty.Register<HeaderBanner, string?>(
         nameof(Header));
 
@@ -41,11 +42,11 @@ public partial class HeaderBanner : UserControl
         get => GetValue(SubHeaderBProperty);
         set => SetValue(SubHeaderBProperty, value);
     }
-
+    
     public HeaderBanner()
     {
         InitializeComponent();
-
+        
         // Detect design time
         if (Avalonia.Controls.Design.IsDesignMode)
         {
@@ -56,13 +57,12 @@ public partial class HeaderBanner : UserControl
                 if (Application.Current.TryFindResource("PrimaryBackground", out var background))
                     SetValue(BackgroundProperty, background);
             }
-
+            
             Header = "Big Header";
             SubHeaderA = "Sub Header A";
             SubHeaderB = "Less Important Sub Header";
-            ;
-        }
-
+;       }
+        
         DataContext = this;
     }
 }
