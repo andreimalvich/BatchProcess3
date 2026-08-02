@@ -10,8 +10,8 @@ public partial class MainViewModel : ViewModelBase
     private readonly PageFactory _pageFactory;
 
 
-    [ObservableProperty]    
-    private bool _sideMenuExpanded = true;
+    [ObservableProperty]
+    public partial bool SideMenuExpanded { get; set; } = true;
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(HomePageIsActive))]
@@ -21,7 +21,7 @@ public partial class MainViewModel : ViewModelBase
     [NotifyPropertyChangedFor(nameof(ReporterPageIsActive))]
     [NotifyPropertyChangedFor(nameof(HistoryPageIsActive))]
     [NotifyPropertyChangedFor(nameof(SettingsPageIsActive))]
-    private PageViewModel _currentPage;
+    public partial PageViewModel CurrentPage { get; set; }
 
     public bool HomePageIsActive => CurrentPage.PageName == ApplicationPageNames.Home;
     public bool ProcessPageIsActive => CurrentPage.PageName == ApplicationPageNames.Process;
