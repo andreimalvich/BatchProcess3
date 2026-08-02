@@ -7,10 +7,10 @@ namespace BatchProcess3.Controls;
 
 public partial class HeaderBanner : UserControl
 {
-    public static readonly StyledProperty<IImage?> BackgroundImageProperty = AvaloniaProperty.Register<HeaderBanner, IImage?>(
+    public static readonly StyledProperty<string?> BackgroundImageProperty = AvaloniaProperty.Register<HeaderBanner, string?>(
         nameof(BackgroundImage));
 
-    public IImage? BackgroundImage
+    public string? BackgroundImage
     {
         get => GetValue(BackgroundImageProperty);
         set => SetValue(BackgroundImageProperty, value);
